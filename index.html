@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólió - Főoldal</title>
+    <!-- 1. Külső stíluslap csatolása -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 13. Belső (internal) CSS példák a <style>-ban -->
+    <style>
+        .internal-highlight {
+            background-color: #e0f2fe;
+            border-left: 4px solid #0284c7;
+            padding: 12px;
+            margin: 16px 0;
+            border-radius: 4px;
+        }
+        .internal-text {
+            color: #0369a1;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <!-- 2. Fejléc és egyszerű navigáció -->
     <header>
         <nav>
             <ul>
@@ -20,20 +38,30 @@
     </header>
 
     <main>
+        <!-- 1. Alap HTML-struktúra (Főoldal) -->
         <section id="fooldal">
             <h1>Üdvözöllek a portfóliómban!</h1>
             <p>Ez a személyes portfólió oldalam, ahol bemutatom a munkáimat és projektjeimet.</p>
+            <!-- 13. Inline CSS példák -->
+            <p>A webfejlesztés során <span style="color: #dc2626; font-weight: bold;">inline piros szöveget</span> és <span style="background-color: #fef08a; padding: 2px 6px; border-radius: 4px;">sárga hátterű kiemelést</span> is tudunk használni.</p>
         </section>
 
+        <!-- Belső CSS használata -->
+        <div class="internal-highlight">
+            <p class="internal-text">Ez egy belső (internal) stíluslappal formázott információs doboz.</p>
+        </div>
+
+        <!-- 3., 4. & 8. „Rólam” szekció és Profilkép -->
         <section id="rolam">
             <h1>Rólam</h1>
-            <img src="profilkep.jpg" alt="Profilkép a portfólió készítőjéről" width="200">
+            <img src="profilkep.jpg" alt="Profilkép a portfólió készítőjéről" class="avatar">
             <h2>Bemutatkozás</h2>
             <p>Szenvedélyes szoftverfejlesztő hallgató vagyok, aki elhivatottan tanulja a modern technológiákat és a webfejlesztést.</p>
             <h2>Érdeklődési körök</h2>
             <p>Fő érdeklődési területeim közé tartozik a mobilalkalmazás-fejlesztés, a rendszerprogramozás és a különféle automatizálási megoldások.</p>
         </section>
 
+        <!-- 5. Képességek felsorolása -->
         <section id="kepessegek">
             <h2>Képességek</h2>
             <ul>
@@ -43,9 +71,10 @@
             </ul>
         </section>
 
-        <section id="projektek">
+        <!-- 6. Projekttáblázat -->
+        <section id="projektek-tabla">
             <h2>Projektek</h2>
-            <table border="1">
+            <table>
                 <thead>
                     <tr>
                         <th>Projekt neve</th>
@@ -72,43 +101,64 @@
         <aside>
             <h3>Gyorslinkek</h3>
             <ul>
-                <li><a href="#fooldal">Főoldal teteje</a></li>
+                <li><a href="#fooldal">Ugrás a tetejére</a></li>
                 <li><a href="rolam.html">Rólam aloldal</a></li>
                 <li><a href="projektek.html">Projektek aloldal</a></li>
                 <li><a href="kapcsolat.html">Kapcsolat aloldal</a></li>
             </ul>
         </aside>
 
+        <!-- 10. Flexbox kétoszlopos elrendezés -->
+        <section class="container">
+            <div>
+                <h3>Frontend fejlesztés</h3>
+                <p>Modern felhasználói felületek építése reszponzív elemekkel.</p>
+            </div>
+            <div>
+                <h3>Backend & Rendszerek</h3>
+                <p>Adatbázisok, szerverek és alacsony szintű alkalmazások kezelése.</p>
+            </div>
+        </section>
+
+        <!-- 8. & 11. Képgaléria Griddel -->
         <section id="galeria">
             <h2>Képgaléria</h2>
-            <figure>
-                <img src="projekt1.jpg" alt="DriveCheck felület" width="300">
-                <figcaption>1. ábra: A DriveCheck alkalmazás főképernyője.</figcaption>
-            </figure>
-            <figure>
-                <img src="projekt2.jpg" alt="Szerver vezérlőpult" width="300">
-                <figcaption>2. ábra: Az otthoni szerver irányítópultja.</figcaption>
-            </figure>
+            <div class="grid">
+                <figure>
+                    <img src="projekt1.jpg" alt="DriveCheck felület">
+                    <figcaption>1. ábra: A DriveCheck alkalmazás főképernyője.</figcaption>
+                </figure>
+                <figure>
+                    <img src="projekt2.jpg" alt="Szerver vezérlőpult">
+                    <figcaption>2. ábra: Az otthoni szerver irányítópultja.</figcaption>
+                </figure>
+                <figure>
+                    <img src="projekt3.jpg" alt="Kód szerkesztés">
+                    <figcaption>3. ábra: Fejlesztői környezet.</figcaption>
+                </figure>
+            </div>
         </section>
 
+        <!-- 9. Videó beágyazása -->
         <section id="video">
             <h2>Projekt bemutató videó</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=BDeKTPQzvR4&pp=ygUSZ29vZ2wgcmVhY3QgbmF0aXZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
 
+        <!-- 10. Kapcsolatfelvételi űrlap -->
         <section id="kapcsolat-urlap">
             <h2>Írj nekem</h2>
             <form action="#" method="POST">
                 <div>
-                    <label for="nev">Név:</label><br>
+                    <label for="nev">Név:</label>
                     <input type="text" id="nev" name="nev" required>
                 </div>
                 <div>
-                    <label for="email">E-mail cím:</label><br>
+                    <label for="email">E-mail cím:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div>
-                    <label for="uzenet">Üzenet:</label><br>
+                    <label for="uzenet">Üzenet:</label>
                     <textarea id="uzenet" name="uzenet" rows="4" required></textarea>
                 </div>
                 <div>
@@ -118,6 +168,7 @@
         </section>
     </main>
 
+    <!-- 12. Lábléc és elérhetőségek -->
     <footer>
         <p>Elérhetőség: info@portfolio.hu | Telefon: +40 700 000 000</p>
         <p>&copy; 2026 Minden jog fenntartva.</p>

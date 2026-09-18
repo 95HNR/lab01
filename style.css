@@ -1,0 +1,222 @@
+/* 12. Betűk a Google Fonts-ból */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 2. Alap reset és dobozmodell */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* 3., 5., 12., 15. Színek, tipográfia, háttér és esztétika */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  background-color: #f4f8ff;
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 16px 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: royalblue;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: darkorange;
+}
+
+main {
+  flex: 1;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  color: royalblue;
+  margin-bottom: 16px;
+}
+
+h2 {
+  color: seagreen;
+  margin: 24px 0 12px 0;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* 4. Térközök és bekezdések */
+p {
+  margin: 16px 0;
+  line-height: 1.7;
+}
+
+/* 6. Gomb-stílus és hover állapot */
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: darkorange;
+}
+
+/* 7. Állapotok és fókusz-jelzés */
+button:focus, a:focus, input:focus, textarea:focus {
+  outline: 3px solid cornflowerblue;
+  outline-offset: 2px;
+}
+
+/* 8. Képek formázása */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 9. Listák testreszabása */
+ol {
+  list-style-type: upper-roman;
+  margin-left: 30px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* 10. Flexbox kétoszlopos elrendezés */
+.container {
+  display: flex;
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.container > div {
+  flex: 1;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 7. Oldalsáv stílus */
+aside {
+  background: #e9efff;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 24px 0;
+  border-left: 4px solid royalblue;
+}
+
+/* 11. Grid elrendezés és reszponzivitás */
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 24px 0;
+}
+
+@media (max-width: 800px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr; }
+  .container { flex-direction: column; }
+}
+
+/* 14. Finomítás: átmenetek és animáció alapok */
+a, button {
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Táblázat stílusok */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f5f9;
+  color: royalblue;
+}
+
+/* Form stílusok */
+form div {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+footer {
+  background-color: #1e293b;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
