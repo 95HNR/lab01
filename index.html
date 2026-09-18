@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólió - Főoldal</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="rolam.html">Rólam</a></li>
+                <li><a href="projektek.html">Projektek</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="#kepessegek">Képességek</a></li>
+                <li><a href="#galeria">Galéria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="fooldal">
+            <h1>Üdvözöllek a portfóliómban!</h1>
+            <p>Ez a személyes portfólió oldalam, ahol bemutatom a munkáimat és projektjeimet.</p>
+        </section>
+
+        <section id="rolam">
+            <h1>Rólam</h1>
+            <img src="profilkep.jpg" alt="Profilkép a portfólió készítőjéről" width="200">
+            <h2>Bemutatkozás</h2>
+            <p>Szenvedélyes szoftverfejlesztő hallgató vagyok, aki elhivatottan tanulja a modern technológiákat és a webfejlesztést.</p>
+            <h2>Érdeklődési körök</h2>
+            <p>Fő érdeklődési területeim közé tartozik a mobilalkalmazás-fejlesztés, a rendszerprogramozás és a különféle automatizálási megoldások.</p>
+        </section>
+
+        <section id="kepessegek">
+            <h2>Képességek</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Java & Flutter</li>
+            </ul>
+        </section>
+
+        <section id="projektek">
+            <h2>Projektek</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Projekt neve</th>
+                        <th>Leírás</th>
+                        <th>Használt technológiák</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DriveCheck</td>
+                        <td>Mobil utazási napló alkalmazás</td>
+                        <td>Java, Android Studio, SQLite</td>
+                    </tr>
+                    <tr>
+                        <td>Home Server</td>
+                        <td>Saját otthoni szerver konfiguráció</td>
+                        <td>Ubuntu Server, CasaOS, Nextcloud</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 7. Oldalsáv -->
+        <aside>
+            <h3>Gyorslinkek</h3>
+            <ul>
+                <li><a href="#fooldal">Főoldal teteje</a></li>
+                <li><a href="rolam.html">Rólam aloldal</a></li>
+                <li><a href="projektek.html">Projektek aloldal</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat aloldal</a></li>
+            </ul>
+        </aside>
+
+        <section id="galeria">
+            <h2>Képgaléria</h2>
+            <figure>
+                <img src="projekt1.jpg" alt="DriveCheck felület" width="300">
+                <figcaption>1. ábra: A DriveCheck alkalmazás főképernyője.</figcaption>
+            </figure>
+            <figure>
+                <img src="projekt2.jpg" alt="Szerver vezérlőpult" width="300">
+                <figcaption>2. ábra: Az otthoni szerver irányítópultja.</figcaption>
+            </figure>
+        </section>
+
+        <section id="video">
+            <h2>Projekt bemutató videó</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=BDeKTPQzvR4&pp=ygUSZ29vZ2wgcmVhY3QgbmF0aXZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <section id="kapcsolat-urlap">
+            <h2>Írj nekem</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="nev">Név:</label><br>
+                    <input type="text" id="nev" name="nev" required>
+                </div>
+                <div>
+                    <label for="email">E-mail cím:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="uzenet">Üzenet:</label><br>
+                    <textarea id="uzenet" name="uzenet" rows="4" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Küldés</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Elérhetőség: info@portfolio.hu | Telefon: +40 700 000 000</p>
+        <p>&copy; 2026 Minden jog fenntartva.</p>
+    </footer>
+</body>
+</html>
