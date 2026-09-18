@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólió - Főoldal</title>
-    <!-- 1. Külső stíluslap csatolása -->
+    <!-- Külső stíluslap -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- 13. Belső (internal) CSS példák a <style>-ban -->
+    <!-- Belső (internal) CSS példa -->
     <style>
         .internal-highlight {
             background-color: #e0f2fe;
@@ -23,7 +23,6 @@
     </style>
 </head>
 <body>
-    <!-- 2. Fejléc és egyszerű navigáció -->
     <header>
         <nav>
             <ul>
@@ -31,48 +30,71 @@
                 <li><a href="rolam.html">Rólam</a></li>
                 <li><a href="projektek.html">Projektek</a></li>
                 <li><a href="kapcsolat.html">Kapcsolat</a></li>
-                <li><a href="#kepessegek">Képességek</a></li>
-                <li><a href="#galeria">Galéria</a></li>
+                <li><a href="#js-gyakorlatok">JS Gyakorlatok</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- 1. Alap HTML-struktúra (Főoldal) -->
         <section id="fooldal">
             <h1>Üdvözöllek a portfóliómban!</h1>
-            <p>Ez a személyes portfólió oldalam, ahol bemutatom a munkáimat és projektjeimet.</p>
-            <!-- 13. Inline CSS példák -->
-            <p>A webfejlesztés során <span style="color: #dc2626; font-weight: bold;">inline piros szöveget</span> és <span style="background-color: #fef08a; padding: 2px 6px; border-radius: 4px;">sárga hátterű kiemelést</span> is tudunk használni.</p>
+            <p>Ez a személyes portfólió oldalam, amely tartalmazza az összes HTML, CSS és JavaScript gyakorlatot.</p>
+            <!-- Inline CSS példa -->
+            <p>A webfejlesztés során <span style="color: #dc2626; font-weight: bold;">inline piros szöveget</span> és <span style="background-color: #fef08a; padding: 2px 6px; border-radius: 4px;">sárga hátterű kiemelést</span> is használunk.</p>
         </section>
 
-        <!-- Belső CSS használata -->
         <div class="internal-highlight">
             <p class="internal-text">Ez egy belső (internal) stíluslappal formázott információs doboz.</p>
         </div>
 
-        <!-- 3., 4. & 8. „Rólam” szekció és Profilkép -->
+        <!-- JavaScript Interaktív Gyakorlatok Szekciója -->
+        <section id="js-gyakorlatok" style="background: #fff; padding: 20px; border-radius: 8px; margin: 24px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <h2>JavaScript Interaktív Gyakorlatok</h2>
+
+            <div style="margin-bottom: 20px;">
+                <h3>3. Számláló gombnyomásra</h3>
+                <button onclick="incrementCounter()">Növelés</button>
+                <p id="counter" style="font-weight: bold; font-size: 1.2rem; margin-top: 5px;">0</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h3>4. Név bekérése</h3>
+                <button onclick="askName()">Kérdezd meg a nevét</button>
+                <p id="name" style="margin-top: 5px; font-style: italic;"></p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h3>5. Visszaszámláló (10 másodperc)</h3>
+                <button onclick="startCountdown()">Indítsd el</button>
+                <p id="countdown" style="font-weight: bold; font-size: 1.2rem; margin-top: 5px;">10</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h3>6. Gyümölcsök listája tömbből</h3>
+                <ul id="fruitList"></ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h3>8. Személy adatai objektumból</h3>
+                <ul id="personInfo"></ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h3>9. Háttérszín váltás</h3>
+                <button onclick="changeBg()">Háttér váltás</button>
+            </div>
+        </section>
+
         <section id="rolam">
             <h1>Rólam</h1>
-            <img src="profilkep.jpg" alt="Profilkép a portfólió készítőjéről" class="avatar">
+            <img src="profilkep.jpg" alt="Profilkép" class="avatar">
             <h2>Bemutatkozás</h2>
-            <p>Szenvedélyes szoftverfejlesztő hallgató vagyok, aki elhivatottan tanulja a modern technológiákat és a webfejlesztést.</p>
+            <p>Szenvedélyes szoftverfejlesztő hallgató vagyok, aki elhivatottan tanulja a modern technológiákat.</p>
             <h2>Érdeklődési körök</h2>
-            <p>Fő érdeklődési területeim közé tartozik a mobilalkalmazás-fejlesztés, a rendszerprogramozás és a különféle automatizálási megoldások.</p>
+            <p>Fő érdeklődési területeim közé tartozik a mobilalkalmazás-fejlesztés és a webfejlesztés.</p>
         </section>
 
-        <!-- 5. Képességek felsorolása -->
-        <section id="kepessegek">
-            <h2>Képességek</h2>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>Java & Flutter</li>
-            </ul>
-        </section>
-
-        <!-- 6. Projekttáblázat -->
-        <section id="projektek-tabla">
+        <section id="projektek">
             <h2>Projektek</h2>
             <table>
                 <thead>
@@ -88,16 +110,10 @@
                         <td>Mobil utazási napló alkalmazás</td>
                         <td>Java, Android Studio, SQLite</td>
                     </tr>
-                    <tr>
-                        <td>Home Server</td>
-                        <td>Saját otthoni szerver konfiguráció</td>
-                        <td>Ubuntu Server, CasaOS, Nextcloud</td>
-                    </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- 7. Oldalsáv -->
         <aside>
             <h3>Gyorslinkek</h3>
             <ul>
@@ -108,44 +124,40 @@
             </ul>
         </aside>
 
-        <!-- 10. Flexbox kétoszlopos elrendezés -->
         <section class="container">
             <div>
-                <h3>Frontend fejlesztés</h3>
-                <p>Modern felhasználói felületek építése reszponzív elemekkel.</p>
+                <h3>Frontend</h3>
+                <p>Reszponzív felületek tervezése.</p>
             </div>
             <div>
-                <h3>Backend & Rendszerek</h3>
-                <p>Adatbázisok, szerverek és alacsony szintű alkalmazások kezelése.</p>
+                <h3>Backend</h3>
+                <p>Adatbázisok és szerverek kezelése.</p>
             </div>
         </section>
 
-        <!-- 8. & 11. Képgaléria Griddel -->
         <section id="galeria">
             <h2>Képgaléria</h2>
             <div class="grid">
                 <figure>
-                    <img src="projekt1.jpg" alt="DriveCheck felület">
-                    <figcaption>1. ábra: A DriveCheck alkalmazás főképernyője.</figcaption>
+                    <img src="projekt1.jpg" alt="Projekt 1">
+                    <figcaption>1. ábra: DriveCheck felület.</figcaption>
                 </figure>
                 <figure>
-                    <img src="projekt2.jpg" alt="Szerver vezérlőpult">
-                    <figcaption>2. ábra: Az otthoni szerver irányítópultja.</figcaption>
+                    <img src="projekt2.jpg" alt="Projekt 2">
+                    <figcaption>2. ábra: Szerver vezérlőpult.</figcaption>
                 </figure>
                 <figure>
-                    <img src="projekt3.jpg" alt="Kód szerkesztés">
+                    <img src="projekt3.jpg" alt="Projekt 3">
                     <figcaption>3. ábra: Fejlesztői környezet.</figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- 9. Videó beágyazása -->
         <section id="video">
             <h2>Projekt bemutató videó</h2>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
         </section>
 
-        <!-- 10. Kapcsolatfelvételi űrlap -->
         <section id="kapcsolat-urlap">
             <h2>Írj nekem</h2>
             <form action="#" method="POST">
@@ -168,10 +180,11 @@
         </section>
     </main>
 
-    <!-- 12. Lábléc és elérhetőségek -->
     <footer>
         <p>Elérhetőség: info@portfolio.hu | Telefon: +40 700 000 000</p>
         <p>&copy; 2026 Minden jog fenntartva.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
